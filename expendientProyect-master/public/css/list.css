@@ -1,0 +1,678 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+/* EditList */
+body{
+   background-color: #545454;
+}
+/* --------------------------------- */
+.containerProds_ProdList{
+  width:65%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  margin: 85px;
+  border-top: 1px solid rgba(80, 76, 76, 0.87);
+  border-bottom: 1px solid rgba(80, 76, 76, 0.87);
+  border-radius: 7px 7px 7px 7px;
+  height: 15%;
+  background-color: rgb(169, 163, 163);
+  position: relative;
+  left: 13%;
+  height: 27%;
+}
+
+h1{
+text-shadow: rgb(123, 120, 120) 0 -2px;
+text-align: center;
+font-size: 48px;
+color: rgb(198, 197, 197);
+margin: 70px
+}
+.infoContainer_prodList{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 88%;
+}
+.title_ProdList{
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 25px;
+  text-shadow: rgb(194, 194, 194) 0 -2px;
+  position: relative;
+  bottom: 32%;
+}
+.title_ProdList2{
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  left: 52%;
+  bottom: 64.4%;
+  text-shadow: rgb(194, 194, 194) 0 -2px;
+  
+}
+.title_ProdList3{
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  left: 2.7%;
+  text-shadow: rgb(194, 194, 194) 0 -2px;
+  bottom: 22.4%;
+}
+.title_ProdList4{
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  left: 52.3%;
+  bottom: 39.2%;
+  text-shadow: rgb(194, 194, 194) 0 -2px;
+  
+}
+
+.title_ProdList5{
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  font-size: 34px;
+  font-weight: bold;
+  position: relative;
+  left: 52%;
+  bottom: 52%;
+  text-shadow: rgb(194, 194, 194) 0 -2px;
+  
+}
+.title_ProdList6{
+  display: none;
+}
+.price_prodList{
+ font-size: 15px;
+ font-weight: bold
+}
+.description_prodList{
+  font-size: 0.78em;
+  font-weight: bold
+}
+.containerProds_ProdList:hover{
+  box-shadow: 2px 5px 7px 5px #808080;
+}
+
+button{
+  background-color:  rgb(169, 163, 163);
+  border: none;
+}
+
+.editar{
+  position: relative;
+  left: 28%;
+  display: inline-block ;
+  width: none;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 whitesmoke;
+  font-size: 16.5px;
+}
+.editar:hover{
+  color: white;
+  box-shadow: inset 0 -100px 0 0 grey;
+}
+.editar:active{
+  transform: scale(0.9);
+}
+
+.editar1{
+  position: relative;
+  left: 32%;
+  display: inline-block ;
+  width: none;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 whitesmoke;
+  font-size: 17.5px;
+}
+
+.editar1:hover{
+  color: white;
+  box-shadow: inset 0 -100px 0 0 grey;
+}
+.editar1:active{
+  transform: scale(0.9);
+}
+
+.detalle{
+  position: relative;
+  left: 30%;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 whitesmoke;
+  font-size: 16.5px;
+}
+.detalle:hover{
+  color: white;
+  box-shadow: inset 0 -100px 0 0 grey;
+}
+.detalle:active{
+  transform: scale(0.9);
+}
+
+.create1{
+  background-color: #545454;
+  }
+  .create{
+    position: relative;
+    left: 185%;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 30px;
+   background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 whitesmoke;
+    font-size: 20px;
+  }
+  .create:hover{
+    color: white;
+    box-shadow: inset 0 -100px 0 0 grey;
+    
+  }
+  .create:active{
+    transform: scale(0.9);
+  }
+
+
+@media (max-width: 789px){
+  /*CAJA GRIS*/
+  .containerProds_ProdList{
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    margin: 15px 0px;
+    border-top: 1px solid rgba(80, 76, 76, 0.87);
+    border-bottom: 1px solid rgba(80, 76, 76, 0.87);
+    border-radius: 7px 7px 7px 7px;
+    height: 15%;
+    background-color: rgb(169, 163, 163);
+    position: relative;
+    left: 6%;
+    height: 30%;
+  }
+/*CAJA GRIS*/
+
+/*CAJA BLANCA*/
+.infoContainer_prodList{
+display: flex;
+flex-direction: column;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+width: 130%;
+height: 80%;
+}
+/*CAJA BLANCA*/
+
+/*Todo lo que esta dentro de la caja BLANCA*/
+  .title_ProdList{
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    font-size: 21.5px;
+    font-weight: bold;
+    position: relative;
+    right: 12%;
+    bottom: 20%;
+    text-shadow: rgb(194, 194, 194) 0 -2px;
+    
+  }
+  .title_ProdList2{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    font-size: 17.5px;
+    font-weight: bold;
+    position: relative;
+    left: 2%;
+    bottom: -17%;
+   
+    /*Proveedor*/
+  }
+  .title_ProdList3{
+    display: none;
+  }
+  .title_ProdList4{
+    display: none;
+  }
+
+  .title_ProdList5{
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    font-size: 17.5px;
+    font-weight: bold;
+    position: relative;
+    left: 2%;
+    bottom: -40%;
+ 
+     /*tipo*/
+}
+/*Todo lo que esta dentro de la caja BLANCA*/
+h1{
+  text-shadow: rgb(123, 120, 120) 0 -2px;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(198, 197, 197);
+  margin: 70px
+  }
+/*BOTONES*/
+button{
+  background-color:  rgb(169, 163, 163);
+  border: none;
+} 
+
+.editar{
+  position: relative;
+  left: 1%;
+  display: inline-block ;
+  width: none;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 whitesmoke;
+  font-size: 9.5px;
+}
+.editar:hover{
+  color: white;
+  box-shadow: inset 0 -100px 0 0 grey;
+}
+.editar:active{
+  transform: scale(0.9);
+}
+
+.editar1{
+  position: relative;
+  left: 1%;
+  display: inline-block ;
+  width: none;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 whitesmoke;
+  font-size: 11.5px;
+}
+.editar1:hover{
+  color: white;
+  box-shadow: inset 0 -100px 0 0 grey;
+}
+.editar1:active{
+  transform: scale(0.9);
+}
+
+.detalle{
+  position: relative;
+  left: 1%;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 whitesmoke;
+  font-size: 9px;
+}
+.detalle:hover{
+  color: white;
+  box-shadow: inset 0 -100px 0 0 grey;
+}
+.detalle:active{
+  transform: scale(0.9);
+}
+
+.create1{
+background-color: #545454;
+}
+.create{
+  position: relative;
+  left: 20.5%;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+ background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 whitesmoke;
+  font-size: 12px;
+  font-weight: bold;
+}
+.create:hover{
+  color: white;
+  box-shadow: inset 0 -100px 0 0 grey;
+  
+}
+.create:active{
+  transform: scale(0.9);
+}
+/*FIN BOTONES*/
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .containerProds_ProdList{
+      width:90%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px;
+      margin: 15px 0px;
+      border-top: 1px solid rgba(80, 76, 76, 0.87);
+      border-bottom: 1px solid rgba(80, 76, 76, 0.87);
+      border-radius: 7px 7px 7px 7px;
+      height: 15%;
+      background-color: rgb(169, 163, 163);
+      position: relative;
+      left: 6%;
+      height: 30%;
+    }
+  /*CAJA GRIS*/
+  
+  /*CAJA BLANCA*/
+  .infoContainer_prodList{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  width: 130%;
+  height: 80%;
+  }
+  /*CAJA BLANCA*/
+  
+  /*Todo lo que esta dentro de la caja BLANCA*/
+    .title_ProdList{
+      color: #000;
+      text-decoration: none;
+      display: flex;
+      font-size: 23px;
+      font-weight: bold;
+      
+      text-shadow: rgb(194, 194, 194) 0 -2px;
+      
+    }
+    .title_ProdList2{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      display: flex;
+      font-size: 23px;
+      font-weight: bold;
+    
+     
+      /*Proveedor*/
+    }
+    .title_ProdList3{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      display: flex;
+      font-size: 23px;
+      font-weight: bold;
+      
+    }
+    .title_ProdList4{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      display: flex;
+      font-size: 23px;
+      font-weight: bold;
+      
+    }
+  
+    .title_ProdList5{
+      color: #FFFFFF;
+      text-decoration: none;
+      display: flex;
+      font-size: 34px;
+      font-weight: bold;
+      position: relative;
+      left: 52%;
+      bottom: 60%;
+      text-shadow: rgb(194, 194, 194) 0 -2px;
+   
+       /*tipo*/
+  }
+  /*Todo lo que esta dentro de la caja BLANCA*/
+  h1{
+    text-shadow: rgb(123, 120, 120) 0 -2px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(198, 197, 197);
+    margin: 5px
+    }
+  /*BOTONES*/
+  button{
+    background-color:  rgb(169, 163, 163);
+    border: none;
+  } 
+  
+  .editar{
+    position: relative;
+    left: 1%;
+    display: inline-block ;
+    width: none;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease-out 0.5s;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 whitesmoke;
+    font-size: 9.5px;
+  }
+  .editar:hover{
+    color: white;
+    box-shadow: inset 0 -100px 0 0 grey;
+  }
+  .editar:active{
+    transform: scale(0.9);
+  }
+  
+  .editar1{
+    position: relative;
+    left: 1%;
+    display: inline-block ;
+    width: none;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 whitesmoke;
+    font-size: 11.5px;
+  }
+  .editar1:hover{
+    color: white;
+    box-shadow: inset 0 -100px 0 0 grey;
+  }
+  .editar1:active{
+    transform: scale(0.9);
+  }
+  
+  .detalle{
+    position: relative;
+    left: 1%;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 whitesmoke;
+    font-size: 9px;
+  }
+  .detalle:hover{
+    color: white;
+    box-shadow: inset 0 -100px 0 0 grey;
+  }
+  .detalle:active{
+    transform: scale(0.9);
+  }
+  
+  .create1{
+  background-color: #545454;
+  position: relative;
+  left: 22%;
+  margin: 35px;
+  }
+  .create{  
+    position: relative;
+    left: 45%;
+    margin: 45px;
+    padding: 15px 30px;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .create:hover{
+    color: white;
+    box-shadow: inset 0 -100px 0 0 grey;
+    
+  }
+  .create:active{
+    transform: scale(0.9);
+  }
+
+
+}

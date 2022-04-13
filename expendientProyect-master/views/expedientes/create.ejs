@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Esta descripción es la que aparece en los buscadores debajo de la URL" />
+	<link href="/css/practica7.css" rel="stylesheet" type="text/css" />
+	<link href="/css/formulario.css" rel="stylesheet" type="text/css" />
+	<link href="./css/resets.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700,800&display=swap" rel="stylesheet">
+	<title>Crear expediente</title>
+</head>
+
+<body>
+	<header>
+		<a href="" class='logo'>
+			<img src="/images/anashepng.png" />
+		</a>
+		<nav>
+			<a class="ultimos" href="/expedientes/listaexpedientes">Lista expedientes</a>
+		</nav>
+
+	</header>
+	<main>
+		<h1>Formulario de expediente
+        </h1>
+		
+
+		<h2>Selecciona el tipo de expediente:</h2>
+		<button class="servicio" type="button" onclick="ocultarCompra()">Servicio/Compra</a></button>
+		<button class="servicio" type="button" onclick="ocultarAyuda()">Ayuda</a></button>
+		<button class="compra" type="button" onclick="ocultarComision()">Comision</a></button>
+	</div>
+		
+		
+		
+	
+		<form action="/expedientes/create" method="post">
+			<div class='field'>
+                <div class='field'>
+                    <label>N° Expediente A13.1</label>
+                    <input name='numero_expedient' type='number'  <% if(locals.oldData) { %>
+						value = <%= oldData.numero_expedient %> 
+					<% } %> > 
+					<% if (locals.errors && errors.numero_expedient) { %>
+						<div class="text-danger">
+							<%= errors.numero_expedient.msg %> 
+						</div>
+					<% } %>	
+                </div>			
+
+            <div class='field'>
+				<label for="">
+                    <span>Fecha inicio</span>
+                    <input type="date" name="fecha_inicio" <% if(locals.oldData) { %>
+						value = <%= oldData.fecha_inicio %> 
+					<% } %> >
+					<% if (locals.errors && errors.fecha_inicio) { %>
+						<div class="text-danger">
+							<%= errors.fecha_inicio.msg %> 
+						</div>
+					<% } %>
+                </label>
+            </div>
+            
+			<div id='fijo'>
+				<label>Tipo de expediente</label>
+				<select name='tipo_expediente'   <% if(locals.oldData) { %>
+					value = <%= oldData.tipo_expediente %> 
+				<% } %> >>
+					<option selected disabled>Sel. una opción</option>
+					<option id="comision6" >Compra</option>
+					<option id="premio" >Comisión</option>
+					<option id="comision7" >Servicio</option>
+				</select>
+				<% if (locals.errors && errors.tipo_expediente) { %>
+					<div class="text-danger">
+						<%= errors.tipo_expediente.msg %> 
+					</div>
+				<% } %>
+			
+	        	</div>
+			<div class='field'>
+				<label spellcheck= "true">Asunto</label>
+				<input name='asunto' type='text' <% if(locals.oldData) { %>
+					value = <%= oldData.asunto %> 
+				<% } %> >	
+				<% if (locals.errors && errors.asunto) { %>
+					<div class="text-danger">
+						<%= errors.asunto.msg %> 
+					</div>
+				<% } %>
+			</div>
+
+			<div class='field'>
+				<label spellcheck= "true">Beneficiario</label>
+				<input name='proveedor' type='text' <% if(locals.oldData) { %>
+					value = <%= oldData.proveedor %> 
+				<% } %> >
+				<% if (locals.errors && errors.proveedor) { %>
+					<div class="text-danger">
+						<%= errors.proveedor.msg %> 
+					</div>
+				<% } %>
+			</div>
+
+			<div class='field'>
+				<label spellcheck= "true">Solicitante</label>
+				<input name='solicitante' type='text' <% if(locals.oldData) { %>
+					value = <%= oldData.solicitante%> 
+				<% } %> >	
+				<% if (locals.errors && errors.proveedor) { %>
+					<div class="text-danger">
+						<%= errors.proveedor.msg %> 
+					</div>
+				<% } %> 
+			</div>
+
+			<div class="field">
+				<label>Tipo de contratacion</label>
+				<select name='contratacion' <% if(locals.oldData) { %>
+					value = <%= oldData.contratacion%> 
+				<% } %> >	 
+					<option selected disabled>Sel. una opción</option>
+					<option>Menor Cuantía</option>
+					<option>Directa</option>
+					<option>Concurso</option>
+                    <option>Licitación</option>
+					<option>Ninguna</option>
+				</select>
+				<% if (locals.errors && errors.proveedor) { %>
+					<div class="text-danger">
+						<%= errors.proveedor.msg %> 
+					</div>
+				<% } %> 
+			</div>
+			
+			
+			<div class="field">
+				<label>Estado</label>
+				<select name='estado' <% if(locals.oldData) { %>
+					value = <%= oldData.estado%> 
+				<% } %> >	  
+					<option selected disabled>Sel. una opción</option>
+					<option>Inicio</option>
+					<option>SG</option>
+					<option id="comision" class="ayuda">Pliego y Publicación</option>
+                    <option id="comision2">Apertura y Pre adjudicación</option>
+					<option id="comision3">Dictamen</option>
+					<option>Resolución</option>
+                    <option id="comision4">Tribunal de Cuenta</option>
+					<option>Orden de Pago</option>
+					<option>Contaduria</option>
+                    <option>Tesorería</option>
+					<option id="comision5">Pago</option>
+				</select>
+				<% if (locals.errors && errors.estado) { %>
+					<div class="text-danger">
+						<%= errors.estado.msg %> 
+					</div>
+				<% } %> 
+			</div> 
+
+            <div class='field'>
+				<label for="">
+                    <span>Fecha de Estado</span>
+                    <input type="date" name="fecha_estado"  <% if(locals.oldData) { %>
+						value = <%= oldData.fecha_estado%> 
+					<% } %>  />
+                </label>
+				<% if (locals.errors && errors.fecha_estado) { %>
+					<div class="text-danger">
+						<%= errors.fecha_estado.msg %> 
+					</div>
+				<% } %>
+            </div>
+
+			<div >
+				<label for="precio">Importe</label>
+				<input name='monto' type='number' placeholder="$" <% if(locals.oldData) { %>
+					value = <%= oldData.monto%> 
+				<% } %>  />
+				<% if (locals.errors && errors.monto) { %>
+					<div class="text-danger">
+						<%= errors.monto.msg %> 
+					</div>
+				<% } %>
+			
+			 </div> 
+
+			<div class='submit'>
+				<button>
+					Cargar Expediente
+				</button>
+
+				<script type="text/javascript">
+					function ocultarCompra() {
+						document.getElementById('premio').style.display = 'none';
+						document.getElementById('premio2').style.display = 'none';
+						document.getElementById('premio3').style.display = 'none';
+						document.getElementById('premio4').style.display = 'none';
+						document.getElementById('premio5').style.display = 'none';
+						document.getElementById('premio6').style.display = 'none';
+						
+					} 
+					function ocultarComision() {
+						document.getElementById('comision').style.display = 'none';
+						document.getElementById('comision2').style.display = 'none';
+						document.getElementById('comision3').style.display = 'none';
+						document.getElementById('comision4').style.display = 'none';
+						document.getElementById('comision5').style.display = 'none';
+						document.getElementById('comision6').style.display = 'none';
+						document.getElementById('comision7').style.display = 'none';	
+						document.getElementById('comision8').style.display = 'none';
+					}
+					function ocultarAyuda() {
+						document.getElementsByClassName('.ayuda').style.display = 'none';
+						document.getElementsByClassName('ayuda2').style.display = 'none';
+						document.getElementsByClassName('ayuda3').style.display = 'none';
+						document.getElementByClassName('ayuda4').style.display = 'none';
+						document.getElementByClassName('.ayuda5').style.display = 'none';
+						document.getElementByClassName('ayuda6').style.display = 'none';
+						document.getElementByClassName('ayuda7').style.display = 'none';	
+						document.getElementByClassName('ayuda8').style.display = 'none';
+					}
+					
+					</script>
+
+				
+					
+					
+					
+				</script>
+			</div>
+		</form>
+	</main>
+	<!--<script src="/js/create.js">    </script>-->
+</body>
+
+</html>

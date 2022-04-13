@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/users.css">
+    <title>REGISTRO</title>
+</head>
+
+<body>
+    <img class="img" src="../images/PROGRESS (2).jpg">
+    <section class="register">
+      
+        <div class="contentBxR">
+            <div class="formBxR">
+                <h2 class="titulo">REGISTRO</h2>
+               
+        
+                <form action="/users/register"  method="POST"  >
+                    <div class="inputBxR">
+                        <span>Nombre</span>
+                        <input type="text" class="nombre" name="nombre" id="nombre"  <% if(locals.oldData) { %>
+                    value = <%= oldData.nombre %> 
+                <% } %> >
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class="text-danger">
+                        <%= errors.nombre.msg %> 
+                    </div>
+                <% } %>
+                     </div>
+
+                    <div class="inputBxR">
+                        <span>Email</span>
+                        <input type="email" name="email" class="email"  <% if(locals.oldData) { %>
+                            value = <%= oldData.email %> 
+                        <% } %> >
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+
+
+                    <div class="inputBxR">
+                        <span>Contraseña</span>
+                        <input type="password" name="password" />
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+
+
+                    
+                    <div class="inputBxR">
+                        <input type="submit" value="Registrarme"  name="">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
